@@ -1,0 +1,70 @@
+{
+	"!!IMPORTANT!!": "Please read COOK10001-example-with-comments.json for explanations of these settings",
+
+	"header": "COOK10001 Introduction to Cooking\nSemester 2 2018",
+	"footer": "",
+
+	"assignmentName": "Assignment 1",
+
+	"subjectCoordName": "Alan Thomas",
+
+	"subjectCoordEmail": "alan.thomas@unimelb.edu.au",
+
+	"maxMarksRowIndex": 2,
+
+	"columns": {
+		"studentNumber": "A",
+		"studentFirstName": "C",
+		"studentLastName": "B",
+		"studentEmail": "D",
+
+		"criteriaSections": {
+			"Recipe - ingredients": {
+				"Appropriate ingredients": "H",
+				"Correct quantities": "I",
+				"Understandability and readability": "J"
+			},
+			"Recipe - method": {
+				"Appropriate method": "L",
+				"Correct timings": "M",
+				"Understandability and readability": "N"
+			},
+			"Food product": {
+				"Presentation": "P",
+				"Taste": "Q",
+				"Texture": "R",
+				"Adherence to recipe": "S"
+			},
+			"Penalties": {
+				"Late penalty (if applicable)": "U"
+			}
+		},
+
+		"totalMarks": "V",
+		"personalFeedback": "F"
+	},
+	
+	"smtp": {
+		"pool": true,
+		"host": "smtp.office365.com",
+		"port": 587,
+		"auth": {
+			"user": "alan.thomas@unimelb.edu.au"
+		}
+	},
+	
+	"emailSubject": "COOK10001 Assignment 1 feedback",
+	
+	"emailBody": [
+		"Dear COOK10001 student,",
+		"",
+		"Attached is your mark breakdown and feedback for Assignment 1. The assignment was marked out of 100, and it makes up 10% of your final subject mark.",
+		"",
+		"Please scroll all the way to the bottom of the PDF to read your tutor's personal feedback to you.",
+		"",
+		"Please contact your tutor in case of any further questions.",
+		"",
+		"Kind regards,",
+		"The COOK10001 team"
+	]
+}

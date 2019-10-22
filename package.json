@@ -1,0 +1,25 @@
+{
+  "name": "markstopdf",
+  "version": "1.0.0",
+  "description": "Given a spreadsheet of an entire class's results, Marks to PDF generates an individual PDF for each student's marks.",
+  "main": "markstopdf.js",
+  "scripts": {
+    "start": "node markstopdf.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan Thomas, University of Melbourne",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://bitbucket.org/atlight/markstopdf.git"
+  },
+  "dependencies": {
+    "csv": "^2.0.0",
+    "dateformat": "^3.0.3",
+    "minimist": "^1.2.0",
+    "nodemailer": "^4.6.4",
+    "pdfmake": "^0.1.35",
+    "promptly": "2.2.0",
+    "strip-json-comments": "^2.0.1"
+  }
+}

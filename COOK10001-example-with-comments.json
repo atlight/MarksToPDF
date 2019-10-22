@@ -1,0 +1,92 @@
+// Assignment configuration JSON file for Marks to PDF
+{
+	// The header and footer don't have to be plain text. They can be a paragraph
+	// or stack of paragraphs in pdfmake's JSON format:
+	// https://github.com/bpampuch/pdfmake#styling
+	"header": "COOK10001 Introduction to Cooking\nSemester 2 2018",
+	"footer": "",
+
+	// A brief name for the assignment. Do not include a title like "ER Modelling Task",
+	// because this text gets squeezed into a table cell next to the final mark.
+	// Keep it down to something like "Assignment 1" or "Project B". Plain text only.
+	"assignmentName": "Assignment 1",
+
+	// Subject coordinator's name as plain text. This name will show up in students'
+	// inboxes as the sender of the email, and in the PDF metadata "author" field
+	"subjectCoordName": "Alan Thomas",
+
+	// Subject coordinator's email address.
+	"subjectCoordEmail": "alan.thomas@unimelb.edu.au",
+
+	// In which row of the spreadsheet are the maximum available mark values located?
+	// One-based index. This row must come before all student rows
+	"maxMarksRowIndex": 2,
+
+	// A map that identifies the spreadsheet columns that contain the necessary bits
+	// of data for each student
+	"columns": {
+		"studentNumber": "A",
+		"studentFirstName": "C",
+		"studentLastName": "B",
+		"studentEmail": "D",
+
+		// The assessment criteria must be grouped into one or more sections. Criteria
+		// names are not read from the CSV file - this is on purpose, as often the
+		// criteria descriptions in the marking spreadsheet are staff-facing instead of
+		// student-facing. You need to specify descriptive names for the criteria below
+		"criteriaSections": {
+			"Recipe - ingredients": {
+				"Appropriate ingredients": "H",
+				"Correct quantities": "I",
+				"Understandability and readability": "J"
+			},
+			"Recipe - method": {
+				"Appropriate method": "L",
+				"Correct timings": "M",
+				"Understandability and readability": "N"
+			},
+			"Food product": {
+				"Presentation": "P",
+				"Taste": "Q",
+				"Texture": "R",
+				"Adherence to recipe": "S"
+			},
+			"Penalties": {
+				"Late penalty (if applicable)": "U"
+			}
+		},
+
+		"totalMarks": "V", // this script doesn't add marks, you need to feed in a
+		                    // column that contains the total marks already added up
+		"personalFeedback": "F"
+	},
+	
+	// SMTP configuration as understood by nodemailer (https://nodemailer.com/smtp/)
+	"smtp": {
+		"pool": true,
+		"host": "smtp.office365.com",
+		"port": 587,
+		"auth": {
+			"user": "alan.thomas@unimelb.edu.au"
+			// Do not include the password in this file. You will be prompted to type it.
+		}
+	},
+	
+	// The subject line of the email sent to students. Plain text.
+	"emailSubject": "COOK10001 Assignment 1 feedback",
+	
+	// The body of the email sent to students. An array of lines (plain text).
+	// The script places a single newline between each of these lines
+	"emailBody": [
+		"Dear COOK10001 student,",
+		"",
+		"Attached is your mark breakdown and feedback for Assignment 1. The assignment was marked out of 100, and it makes up 10% of your final subject mark.",
+		"",
+		"Please scroll all the way to the bottom of the PDF to read your tutor's personal feedback to you.",
+		"",
+		"Please contact your tutor in case of any further questions.",
+		"",
+		"Kind regards,",
+		"The COOK10001 team"
+	]
+}

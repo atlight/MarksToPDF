@@ -1,0 +1,4 @@
+*.pdf
+*.csv
+node_modules
+*.log
